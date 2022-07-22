@@ -471,6 +471,10 @@ nav.menu{
         line-height: 95%;
     }
 
+    .grl-wrapper{
+        padding: 0 5%;
+    }
+
     a.button{
         font-size: 2.5vw;
         padding: 0.4em 0.5em 0.4em 1em;
@@ -544,6 +548,118 @@ nav.menu{
         flex-direction: row;
         justify-content: space-between;
         font-size: 3.8vw;
+    }
+
+}
+
+@media (max-width: 767px){
+
+    h1{
+        font-size: 8vw;
+        line-height: 95%;
+    }
+    
+    h2{
+        font-size: 13vw;
+        line-height: 95%;
+    }
+    
+    h3{
+        font-size: 6.5vw;
+        line-height: 1.2;
+    }
+    
+    h4{
+        font-size: 6vw;
+        line-height: 1.2;
+    }
+    
+    h6{
+        font-size: 4vw;
+        line-height: 95%;
+    }
+
+    a.button{
+        font-size: 5vw;
+        padding: 0.3em 0.5em 0.3em 1em;
+    }
+
+    span.material-symbols-outlined{
+        font-size: 5vw;
+        height: 6vw;
+        width: 6vw;
+        transform: scale(.3);
+    }
+    
+    a.button:hover span.material-symbols-outlined{
+        font-size: 5vw;
+        height: 6vw;
+        width: 6vw;
+        transform: scale(1.3);
+    }
+
+    div.logo{
+        font-size: 4vw;
+    }
+
+    a.menu-link{
+        font-size: 12vw;
+        margin: 3% 0;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid var(--secondary-color);
+        margin: 0 3%;
+        padding: 2% 0 5%;
+        font-size: 3vw;
+    }
+
+    div.social-media{
+        display: flex;
+        justify-content: center;
+        width: 45vw;
+        font-size: 6vw;
+        column-gap: 3%;
+        margin: 5%;
+    }
+    
+    div.rrss{
+        border: 2px solid var(--secondary-color);
+        border-radius: 50%;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    section.cta-contact{
+        padding: 20% 0 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    section.cta-contact h2{
+        font-size: 12vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 95%;
+        padding-bottom: 5%;
+    }
+    
+    div.menu2{
+        width: 100%;
+        margin-top: 7%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 4vw;
+        row-gap: 3%;
+    }
+
+    div.menu2 h4{
+        margin-top: 3%
     }
 
 }
@@ -675,6 +791,10 @@ div.work-card:hover .work-image img{
         text-align: initial;
     }
 
+    div.location h3{
+        line-height: 1;
+    }
+
     .about-information {
         width: 75vw;
     }
@@ -699,16 +819,84 @@ div.work-card:hover .work-image img{
     }
     
     div.divider{
-        height: 2px;
-        background-color: var(--secondary-color);
-        width: 100%;
         margin: 10px 0 10px;
     }
     
     div.work-title h2{
         font-size: 3.5vw;
-        font-weight: 500;
-        text-transform: uppercase;
+        line-height: 95%;
+        padding-top: 2%;
+    }
+    
+    div.work-card:hover .work-image img{
+        border-radius: 3vw;
+        transform: scale(0.98);
+    }
+
+}
+
+@media (max-width: 767px){
+
+    .hero div.name h2 {
+        font-size: 17vw;
+    }
+
+    section.hero {
+        flex-direction: column;
+    }
+
+    div.name, div.information{
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+
+    .hero div.information h1 {
+        font-size: 9.5vw;
+        text-align: initial;
+        padding: 3% 0;
+    }
+
+    div.location h3{
+        line-height: 1;
+    }
+
+    section.about, section.works{
+        padding: 20% 0 5%;
+    }
+
+    .about-information {
+        width: 100%;
+        padding: 5% 0 7%;
+    }
+
+    lottie-player{
+        width: 6.5vw;
+        height: 6.5vw;
+        margin-left: 10px;
+    }
+
+    div.works-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .work-card{
+        width: 100%;
+        padding: 0;
+        margin: 25px 0;
+    }
+    
+    .work-image img{
+        height: 100vw;
+    }
+    
+    div.divider{
+        margin: 10px 0 10px;
+    }
+    
+    div.work-title h2{
+        font-size: 7vw;
         line-height: 95%;
         padding-top: 2%;
     }
