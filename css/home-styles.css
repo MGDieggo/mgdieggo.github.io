@@ -1,0 +1,243 @@
+/* ESTILOS HOME */
+
+section.hero{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+div.name, div.information{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.hero div.name h2{
+    font-size: 8vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 95%;
+}
+
+.hero div.information h1{
+    font-size: 5vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 95%;
+    text-align: right;
+}
+
+div.location{
+    display: flex;
+    align-items: center;
+}
+
+div.location h3{
+    line-height: normal;
+}
+
+lottie-player{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-left: 10px;
+}
+
+lottie-player path{
+    stroke-width: 3.8;
+}
+
+section.about, section.works{
+    padding: 10% 0 5%;
+}
+
+.about-information{
+    width: 60vw;
+    padding: 2% 0 3%;
+}
+
+div.section-title{
+    width: 100%;
+}
+
+section.works{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.works-wrapper{
+    display: flex;
+    padding: 3% 0 3%;
+}
+
+.work-card{
+    width: 25%;
+    padding: 10px;
+}
+
+.work-image img{
+    height: 33vw;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s cubic-bezier(.215,.61,.355,1);
+}
+
+div.divider{
+    height: 2px;
+    background-color: var(--secondary-color);
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+div.work-title h2{
+    font-size: 1.8vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 95%;
+    padding-top: 2%;
+}
+
+div.work-card:hover .work-image img{
+    border-radius: 3vw;
+    transform: scale(0.98);
+}
+
+@media (max-width: 1024px){
+
+    .hero div.name h2 {
+        font-size: 15vw;
+    }
+
+    section.hero {
+        flex-direction: column;
+    }
+
+    div.name, div.information{
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 3%;
+    }
+
+    .hero div.information h1 {
+        font-size: 5vw;
+        text-align: initial;
+    }
+
+    div.location h3{
+        line-height: 1;
+    }
+
+    .about-information {
+        width: 75vw;
+    }
+
+    lottie-player{
+        width: 4vw;
+        height: 4vw;
+        margin-left: 10px;
+    }
+
+    div.works-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .work-card{
+        width: 50%;
+        padding: 10px;
+    }
+    
+    .work-image img{
+        height: 50vw;
+    }
+    
+    div.divider{
+        margin: 10px 0 10px;
+    }
+    
+    div.work-title h2{
+        font-size: 3.5vw;
+        line-height: 95%;
+        padding-top: 2%;
+    }
+    
+    div.work-card:hover .work-image img{
+        border-radius: 3vw;
+        transform: scale(0.98);
+    }
+
+}
+
+@media (max-width: 767px){
+
+    .hero div.name h2 {
+        font-size: 17vw;
+    }
+
+    section.hero {
+        flex-direction: column;
+    }
+
+    div.name, div.information{
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 3%;
+    }
+
+    .hero div.information h1 {
+        font-size: 9.5vw;
+        text-align: initial;
+        padding: 3% 0;
+    }
+
+    div.location h3{
+        line-height: 1;
+    }
+
+    section.about, section.works{
+        padding: 20% 0 5%;
+    }
+
+    .about-information {
+        width: 100%;
+        padding: 5% 0 7%;
+    }
+
+    lottie-player{
+        width: 6.5vw;
+        height: 6.5vw;
+        margin-left: 10px;
+    }
+
+    div.works-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .work-card{
+        width: 100%;
+        padding: 0;
+        margin: 25px 0;
+    }
+    
+    .work-image img{
+        height: 100vw;
+    }
+    
+    div.divider{
+        margin: 10px 0 10px;
+    }
+    
+    div.work-title h2{
+        font-size: 7vw;
+        line-height: 95%;
+        padding-top: 2%;
+    }
+    
+    div.work-card:hover .work-image img{
+        border-radius: 3vw;
+        transform: scale(0.98);
+    }
+
+}
