@@ -48,7 +48,7 @@ div.arrow{
 }
 
 span.material-symbols-outlined.arrow{
-    font-size: 10vw;
+    font-size: 3vw;
     color: var( --secondary-color );
 }
 
@@ -59,3 +59,53 @@ div.story{
 div.story p{
     margin-bottom: 2%;
 }
+
+div.accordion{
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    margin-top: 10%;
+}
+
+div#experience, #skills, #software{
+    width: 100%;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+div#experience span.material-symbols-outlined.arrow, div#skills span.material-symbols-outlined.arrow, div#software span.material-symbols-outlined.arrow{
+    font-size: 5vw;
+    transition: 0.3s ease;
+}
+
+.rotate-icon{
+    transform: rotate(-180deg);
+}
+
+div#experience-content, #skills-content, #software-content{
+    padding: 2% 0;
+    display: none;
+}
+
+div.accordion p, div.accordion li {
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.4;
+}
+
+div.accordion h3{
+    font-weight: 600;
+    font-size: 1.8vw;
+    line-height: 2;
+}
+
+div.accordion h5{
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 2;
+}
+

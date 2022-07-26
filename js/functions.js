@@ -29,4 +29,19 @@ $(document).ready(function(){
         $(".hamburger").eq(0).click();
     });
 
+    $("#experience").click(function(){
+        $("#experience-content").slideToggle();
+        $("#experience-arrow").toggleClass("rotate-icon");
+    });
+
+    $("#skills").click(function(){
+        $("#skills-content").slideToggle();
+        $("#skills-arrow").toggleClass("rotate-icon");
+    });
+
+    $("#software").click(function(){
+        $("#software-content").slideToggle();
+        $("#software-arrow").toggleClass("rotate-icon");
+    });
+
 });

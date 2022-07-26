@@ -292,7 +292,7 @@ a.button:hover{
     color: var(--primary-color);
 }
 
-span.material-symbols-outlined{
+span.material-symbols-outlined:not(.material-symbols-outlined.arrow){
     font-size: 1.3vw;
     position: relative;
     margin-left: 25px;
@@ -308,7 +308,7 @@ span.material-symbols-outlined{
     transition-timing-function: cubic-bezier(.215,.61,.355,1);
 }
 
-.material-symbols-outlined::after:not(.arrow){
+.material-symbols-outlined:not(.material-symbols-outlined.arrow)::after{
     content: "circle";
     position: absolute;
     width: 100%;
