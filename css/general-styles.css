@@ -308,7 +308,7 @@ span.material-symbols-outlined{
     transition-timing-function: cubic-bezier(.215,.61,.355,1);
 }
 
-.material-symbols-outlined::after{
+.material-symbols-outlined::after:not(.arrow){
     content: "circle";
     position: absolute;
     width: 100%;
@@ -410,6 +410,12 @@ h6{
     font-weight: 400;
     text-transform: uppercase;
     line-height: 95%;
+}
+
+p:not(.footer-text){
+    font-size: 1.8vw;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .grl-wrapper{

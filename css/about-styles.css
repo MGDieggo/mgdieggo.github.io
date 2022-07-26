@@ -1,0 +1,61 @@
+section.about-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+div.name h1{
+    font-size: 10vw;
+    z-index: 100;
+}
+
+div.status{
+    text-align: end;
+}
+
+section.description{
+    display: flex;
+    position: relative;
+    top: -10vw;
+}
+
+div.description-info{
+    width: 40vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+div.img-me{
+    width: 60vw;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+div.img-me img{
+    width: 80%;
+}
+
+section.about-story{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.arrow{
+    width: 30vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+span.material-symbols-outlined.arrow{
+    font-size: 10vw;
+    color: var( --secondary-color );
+}
+
+div.story{
+    width: 60vw;
+}
+
+div.story p{
+    margin-bottom: 2%;
+}
