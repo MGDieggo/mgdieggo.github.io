@@ -477,6 +477,11 @@ nav.menu{
         line-height: 95%;
     }
 
+    p:not(.footer-text){
+        font-size: 2.5vw;
+        line-height: 1.4;
+    }
+
     .grl-wrapper{
         padding: 0 5%;
     }
@@ -486,7 +491,7 @@ nav.menu{
         padding: 0.4em 0.5em 0.4em 1em;
     }
 
-    span.material-symbols-outlined{
+    span.material-symbols-outlined:not(.material-symbols-outlined.arrow){
         font-size: 2.5vw;
         height: 3vw;
         width: 3vw;
@@ -585,12 +590,17 @@ nav.menu{
         line-height: 95%;
     }
 
+    p:not(.footer-text){
+        font-size: 5vw;
+        line-height: 1.3;
+    }
+
     a.button{
         font-size: 5vw;
         padding: 0.3em 0.5em 0.3em 1em;
     }
 
-    span.material-symbols-outlined{
+    span.material-symbols-outlined:not(.material-symbols-outlined.arrow){
         font-size: 5vw;
         height: 6vw;
         width: 6vw;
