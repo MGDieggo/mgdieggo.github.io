@@ -70,3 +70,46 @@ video.iphone13max-video{
     padding: 4% 5% 5%;
     border-radius: 10%;
 }
+
+section.section-banner{
+    position: relative;
+    min-height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.section-banner h3{
+    position: absolute;
+    color: #fff;
+}
+
+section.section-banner video{
+    object-fit: cover;
+    width: 100%;
+    height: 40vw;
+}
+
+.overlayed{
+    filter: brightness(0.5);
+}
+
+section.art-frames{
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 8%;
+}
+
+div.frame{
+    width: 30vw;
+}
+
+div.frame img{
+    width: 100%;
+}
+
+section.post-navigation{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
