@@ -1,0 +1,72 @@
+section.cta-contact{
+    padding: 10% 3% 5%;
+}
+
+section.project-information{
+    margin-top: 8%;
+    padding-bottom: 7%;
+}
+
+h2.date, h2.categories{
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 1% 0;
+}
+
+p.description{
+    width: 70vw;
+    margin: 3% 0;
+}
+
+a#website{
+    margin-bottom: 4%;
+}
+
+img.banner{
+    width: 100%;
+}
+
+section.website-display{
+    display: flex;
+    justify-content: center;
+    padding: 10% 0;
+}
+
+#whitepaper-web{
+    background-color: #D2CFCD;
+}
+
+section.website-display div.device-wrapper{
+    width: 60vw;
+    position: relative;
+}
+
+img.device-frame{
+    width: 100%;
+    position: absolute;
+}
+
+video{
+    width: 100%;
+}
+
+video.ipad-video{
+    padding: 1%;
+    border-radius: 5%;
+}
+
+section.mobile3-display{
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 8%;
+}
+
+section.mobile3-display div.device-wrapper{
+    width: 25%;
+    position: relative;
+}
+
+video.iphone13max-video{
+    padding: 4% 5% 5%;
+    border-radius: 10%;
+}

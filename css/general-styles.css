@@ -448,6 +448,10 @@ nav.menu{
     font-size: 2vw;
 }
 
+section.page-title{
+    margin-top: 10%;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1024px){
@@ -512,6 +516,14 @@ nav.menu{
     a.menu-link{
         font-size: 8vw;
         margin: 3% 0;
+    }
+
+    section.page-title{
+        margin-top: 10%;
+    }
+    
+    section.page-title h1{
+        font-size: 15vw;
     }
 
     footer{
@@ -621,6 +633,14 @@ nav.menu{
     a.menu-link{
         font-size: 12vw;
         margin: 3% 0;
+    }
+
+    section.page-title{
+        margin-top: 15%;
+    }
+    
+    section.page-title h1{
+        font-size: 17vw;
     }
 
     footer{
