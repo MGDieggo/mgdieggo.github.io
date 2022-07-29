@@ -41,6 +41,14 @@ section.website-display div.device-wrapper{
     position: relative;
 }
 
+section.website-display.imac{
+    padding: 8% 0 25%;
+}
+
+section.website-display div.device-wrapper.imac{
+    width: 70vw;
+}
+
 img.device-frame{
     width: 100%;
     position: absolute;
@@ -53,6 +61,10 @@ video{
 video.ipad-video{
     padding: 1%;
     border-radius: 5%;
+}
+
+video.imac-video{
+    padding: 1%;
 }
 
 section.mobile3-display{
@@ -82,9 +94,16 @@ section.section-banner{
 section.section-banner h3{
     position: absolute;
     color: #fff;
+    text-align: center;
 }
 
 section.section-banner video{
+    object-fit: cover;
+    width: 100%;
+    height: 40vw;
+}
+
+section.section-banner img{
     object-fit: cover;
     width: 100%;
     height: 40vw;
@@ -100,16 +119,177 @@ section.art-frames{
     padding: 10% 8%;
 }
 
+section.art-frames.tune-headphones{
+    padding: 20% 5%;
+}
+
 div.frame{
     width: 30vw;
 }
 
+div.frame.tune-headphones{
+    width: 30%;
+}
+
 div.frame img{
     width: 100%;
+    transition: 0.3s ease;
+}
+
+div.frame.tune-headphones img:hover{
+    transform: scale(1.05);
 }
 
 section.post-navigation{
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
+}
+
+.page-final{
+    margin-bottom: 10%;
+}
+
+@media (max-width: 1024px){
+
+    h1.project-title{
+        font-size: 13vw;
+    }
+
+    h2.date, h2.categories{
+        font-size: 2.5vw;
+    }
+
+    p.description{
+        width: 100%;
+    }
+
+    img.banner{
+        height: 60vw;
+        object-fit: cover;
+    }
+
+    section.website-display{
+        padding: 20% 0;
+    }
+
+    section.website-display div.device-wrapper{
+        width: 80vw;
+    }
+
+    section.mobile3-display{
+        padding: 20% 5%;
+    }
+    
+    section.mobile3-display div.device-wrapper{
+        width: 30%;
+    }
+
+    section.section-banner{
+        min-height: 60vw;
+    }
+    
+    section.section-banner video{
+        height: 60vw;
+    }
+
+    section.section-banner img{
+        height: 60vw;
+    }
+
+    section.art-frames{
+        padding: 20% 8%;
+    }
+    
+    div.frame{
+        width: 35vw;
+    }
+
+    section.website-display.imac{
+        padding: 15% 0 35%;
+    }
+    
+    section.website-display div.device-wrapper.imac{
+        width: 80vw;
+    }
+
+}
+
+@media (max-width: 767px){
+
+    h1.project-title{
+        font-size: 12vw;
+        margin: 5% 0;
+    }
+
+    h2.date, h2.categories{
+        font-size: 4vw;
+    }
+
+    p.description{
+        font-size: 4vw;
+        margin: 5% 0;
+    }
+
+    img.banner{
+        height: 70vw;
+        object-fit: cover;
+    }
+
+    section.website-display{
+        padding: 30% 0;
+    }
+
+    section.website-display div.device-wrapper{
+        width: 80vw;
+    }
+
+    section.mobile3-display{
+        padding: 30% 5%;
+    }
+    
+    section.mobile3-display div.device-wrapper{
+        width: 30%;
+    }
+
+    section.section-banner{
+        min-height: 60vw;
+    }
+
+    section.section-banner h3{
+        font-size: 4.5vw;
+    }
+    
+    section.section-banner video{
+        height: 60vw;
+    }
+
+    section.section-banner img{
+        height: 60vw;
+    }
+
+    section.art-frames{
+        padding: 30% 8%;
+    }
+    
+    div.frame{
+        width: 35vw;
+    }
+
+    section.art-frames.tune-headphones {
+        padding: 30% 5%;
+    }
+
+    section.post-navigation{
+        margin-bottom: 10%;
+    }
+
+    section.website-display.imac{
+        padding: 25% 0 50%;
+    }
+    
+    section.website-display div.device-wrapper.imac{
+        width: 90vw;
+    }
+
 }
