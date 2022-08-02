@@ -13,6 +13,77 @@ section.contact{
 
 div.contact-form{
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    padding-top: 13vw;
+    justify-content: flex-end;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+::placeholder{
+    font-size: 1.3vw;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+input:not(input[type="submit"]), textarea {
+    background-color: transparent;
+    height: 2.3vw;
+    border-style: none;
+    border-bottom: 2px solid var(--secondary-color);
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+textarea{
+    height: initial;
+    resize: none;
+}
+
+input[type="submit"]{
+    margin-top: 5%;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    border-radius: 100px;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    padding: 0.5em 1em 0.5em 1em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s ease;
+    width: fit-content;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+input:focus-visible, textarea:focus-visible{
+        outline-width: 0;
+}
+
+div.success-message{
+    color: rgb(12, 58, 12);
+    margin-top: 3%;
+    display: none;
+}
+
+div.error-message{
+    color: rgb(92, 17, 17);
+    margin-top: 3%;
+    display: none;
 }
 
 div.contact-information{
@@ -49,6 +120,8 @@ div.contact-information h2{
     display: flex;
     flex-direction: column;
 }
+
+
 
 @media (max-width: 767px){
 

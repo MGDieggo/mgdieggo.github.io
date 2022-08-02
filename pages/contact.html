@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works - Diego Martínez</title>
+    <title>Contact - Diego Martínez</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,6 +15,37 @@
     <!-- <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script> -->
     <script src="../js/luxy.js/dist/js/luxy.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("gA-d-nLpmPPesJI_z");
+        })();
+
+        window.onload = function(){
+            document.getElementById("contact-form").addEventListener("submit", function(event){
+                event.preventDefault();
+                console.log("SUBMIT");
+
+                emailjs.sendForm("service_cbqt5f9", "template_ysv4pm4", this)
+                .then( 
+                    function( success ){
+                        console.log("SUCCESS");
+                        console.log(success);
+                        $("input[type=text]").val("");
+                        $("input[type=email]").val("");
+                        $("textarea").val("");
+                        $("div.success-message").show;
+                    }, 
+                    function( error ){
+                        console.log("ERROR");
+                        console.log(error);
+                    }   
+                );
+            });
+        };
+    </script>
 </head>
 <body>
     <div id="luxy">
@@ -45,8 +76,19 @@
             </section>
             <section class="contact">
                 <div class="contact-form">
-                    <input type="text" placeholder="What's your name?">
-                    <input type="email" name="" id="" placeholder="What's your email?">
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="01  What's your name?">
+                        <input type="email" name="email" id="" placeholder="02  What's your email?">
+                        <input type="text" name="services" placeholder="03  What services are you looking for?">
+                        <textarea name="project" id="" cols="30" rows="2" placeholder="04  Tell me about your project:"></textarea>
+                        <input type="submit" class="button" value="Submit">
+                    </form>
+                    <div class="success-message">
+                        Your message was sent succesfully!
+                    </div>
+                    <div class="error-message">
+                        An error has occurred, please try again.
+                    </div>
                 </div>
                 <div class="contact-information">
                     <div class="me-img">

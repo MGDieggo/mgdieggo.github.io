@@ -273,7 +273,7 @@ a{
     color: var(--secondary-color);
 }
 
-a.button{
+a.button, button.button{
     text-transform: uppercase;
     font-size: 1.3vw;
     border-radius: 100px;
@@ -287,7 +287,7 @@ a.button{
     width: fit-content;
 }
 
-a.button:hover{
+a.button:hover, button.button:hover{
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
@@ -322,7 +322,7 @@ span.material-symbols-outlined:not(.material-symbols-outlined.arrow){
     transition-timing-function: cubic-bezier(.215,.61,.355,1);
 }
 
-a.button:hover span.material-symbols-outlined{
+a.button:hover span.material-symbols-outlined, button.button:hover span.material-symbols-outlined{
     font-size: 1.3vw;
     position: relative;
     margin-left: 25px;
@@ -337,7 +337,7 @@ a.button:hover span.material-symbols-outlined{
 }
 
 
-a.button:hover .material-symbols-outlined::after{
+a.button:hover .material-symbols-outlined::after, button.button:hover .material-symbols-outlined::after{
     content: "circle";
     position: absolute;
     width: 100%;
