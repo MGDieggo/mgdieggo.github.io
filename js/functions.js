@@ -44,4 +44,21 @@ $(document).ready(function(){
         $("#software-arrow").toggleClass("rotate-icon");
     });
 
+    animacionScroll(".text-slide", "text-animation");
+    animacionScroll("#text-about", "text-animation");
+    animacionScroll("#text-works", "text-animation");
+
 });
+
+function animacionScroll(id_element, clase){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop(); 
+        var offsetElement = $(id_element).offset().top; 
+        var heightWindow = $(window).height();
+        if(scroll + heightWindow/2 >= offsetElement){
+            $(id_element).addClass(clase).delay(500).queue(function(){
+                $("div.big-mask").removeClass("text-mask");
+            })
+         } 
+    }) 
+}

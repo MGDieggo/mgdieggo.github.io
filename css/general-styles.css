@@ -422,9 +422,10 @@ p:not(.footer-text){
     padding: 0 3%;
 }
 
-.text-slide{
+.text-slide, #text-works, #text-about{
     display: inline-block;
     white-space: break-spaces;
+    transform: translateY(120%);
 }
 
 /* HEADER */
@@ -450,6 +451,48 @@ nav.menu{
 
 section.page-title{
     margin-top: 10%;
+}
+
+.text-mask{
+    overflow: hidden;
+}
+
+.text-animation{
+    animation-name: SlideUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.delay1{
+    animation-delay: 0.2s;
+}
+
+.delay2{
+    animation-delay: 0.4s;
+}
+.delay3{
+    animation-delay: 0.6s;
+}
+.delay4{
+    animation-delay: 0.8s;
+}
+.delay5{
+    animation-delay: 1s;
+}
+.delay6{
+    animation-delay: 1.2s;
+}
+.delay7{
+    animation-delay: 1.4s;
+}
+.delay8{
+    animation-delay: 1.6s;
+}
+.delay9{
+    animation-delay: 1.8s;
+}
+.delay10{
+    animation-delay: 2s;
 }
 
 /* MEDIA QUERIES */
@@ -696,6 +739,18 @@ section.page-title{
 
     div.menu2 h4{
         margin-top: 3%
+    }
+
+}
+
+@keyframes SlideUp{
+
+    0%{
+        transform: translateY(120%);
+    }
+
+    100%{
+        transform: translateY(0%);
     }
 
 }
