@@ -55,11 +55,8 @@ $(document).ready(function(){
 
 
 window.onload = function() {
-    $(function($){
-        setTimeout(function(){
-            $(".loader").slideUp(2000);
-        });
-    });
+    $(".loader").slideUp(2000);
+    $("span.text-slide").addClass(animation-slideup).delay(2000);
 };
 
 
