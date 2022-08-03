@@ -27,7 +27,12 @@
             document.getElementById("contact-form").addEventListener("submit", function(event){
                 event.preventDefault();
                 console.log("SUBMIT");
+                var email = $("input[type=email]").val("");
 
+                if(email==""){
+                    $("#error-mail").show();
+                    return
+                }
                 emailjs.sendForm("service_cbqt5f9", "template_ysv4pm4", this)
                 .then( 
                     function( success ){
@@ -36,11 +41,12 @@
                         $("input[type=text]").val("");
                         $("input[type=email]").val("");
                         $("textarea").val("");
-                        $("div.success-message").show;
+                        $("div.success-message").show();
                     }, 
                     function( error ){
                         console.log("ERROR");
                         console.log(error);
+                        $("#error-message").show();
                     }   
                 );
             });
@@ -63,10 +69,10 @@
             </nav>
             <section class="menu-full-page" id="menu">
                 <div class="menu-wrapper">
-                    <a href="../index.html" class="menu-link underline-animation text-slide"><div class="text-mask">Home</div></a>
-                    <a href="about.html" class="menu-link underline-animation text-slide"><div class="text-mask">About</div></a>
-                    <a href="works.html" class="menu-link underline-animation text-slide"><div class="text-mask">Works</div></a>
-                    <a href="contact.html" class="menu-link underline-animation text-slide"><div class="text-mask">Contact</div></a>
+                    <a href="../index.html" class="menu-link underline-animation"><div class="text-mask"><span class="text-slide animation-slideup delay2">Home</span></div></a>
+                    <a href="about.html" class="menu-link underline-animation"><div class="text-mask"><span class="text-slide animation-slideup delay4">About</span></div></a>
+                    <a href="works.html" class="menu-link underline-animation"><div class="text-mask"><span class="text-slide animation-slideup delay6">Works</span></div></a>
+                    <a href="contact.html" class="menu-link underline-animation"><div class="text-mask"><span class="text-slide animation-slideup delay8">Contact</span></div></a>
                 </div>
             </section>
         </header>
@@ -78,7 +84,7 @@
                 <div class="contact-form">
                     <form id="contact-form">
                         <input type="text" name="name" placeholder="01  What's your name?">
-                        <input type="email" name="email" id="" placeholder="02  What's your email?">
+                        <input type="email" name="email" id="" required placeholder="02  What's your email?">
                         <input type="text" name="services" placeholder="03  What services are you looking for?">
                         <textarea name="project" id="" cols="30" rows="2" placeholder="04  Tell me about your project:"></textarea>
                         <input type="submit" class="button" value="Submit">
@@ -86,7 +92,10 @@
                     <div class="success-message">
                         Your message was sent succesfully!
                     </div>
-                    <div class="error-message">
+                    <div id="error-message" class="error-message">
+                        An error has occurred, please try again.
+                    </div>
+                    <div id="error-mail" class="error-message">
                         An error has occurred, please try again.
                     </div>
                 </div>

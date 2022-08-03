@@ -4,6 +4,8 @@ $(document).ready(function(){
 
     $(".location-animation path").attr("stroke-width","2.8");
 
+    $("div.big-mask").removeClass("text-mask").delay(500);
+
     console.log("Borde activado");
 
     $(".hamburger--spring").click(function(){
@@ -17,8 +19,7 @@ $(document).ready(function(){
             } else {
             document.body.parentElement.style.overflow = "inherit";
             document.body.style.overflow = "inherit";
-            }
-    
+        }
     });
 
     $(".hamburger").click(function() {
@@ -44,21 +45,31 @@ $(document).ready(function(){
         $("#software-arrow").toggleClass("rotate-icon");
     });
 
-    animacionScroll(".text-slide", "text-animation");
-    animacionScroll("#text-about", "text-animation");
-    animacionScroll("#text-works", "text-animation");
+    animacionScroll("#text-about", "animation-slideup");
+    animacionScroll("#text-works", "animation-slideup");
+    animacionScroll("#location-lottie", "animation-fadein");
+    animacionScroll("span.slideup-menu", "animation-slideup");
 
+    
 });
+
+
+window.onload = function() {
+    $(function($){
+        setTimeout(function(){
+            $(".loader").slideUp(2000);
+        });
+    });
+};
+
 
 function animacionScroll(id_element, clase){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop(); 
-        var offsetElement = $(id_element).offset().top; 
+        var offsetElement = $(id_element).offset().top;
         var heightWindow = $(window).height();
-        if(scroll + heightWindow/2 >= offsetElement){
-            $(id_element).addClass(clase).delay(500).queue(function(){
-                $("div.big-mask").removeClass("text-mask");
-            })
-         } 
+        if(scroll + heightWindow/1 >= offsetElement){
+            $(id_element).addClass(clase);     
+        } 
     }) 
 }

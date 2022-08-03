@@ -37,6 +37,10 @@ div.location h3{
     line-height: normal;
 }
 
+span#location-lottie{
+    opacity: 0;
+}
+
 lottie-player{
     width: 2.5vw;
     height: 2.5vw;
@@ -45,6 +49,11 @@ lottie-player{
 
 lottie-player path{
     stroke-width: 3.8;
+}
+
+section.reel{
+    position: relative;
+    z-index: 100;
 }
 
 section.about, section.works{
