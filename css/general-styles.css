@@ -422,7 +422,7 @@ p:not(.footer-text){
     padding: 0 3%;
 }
 
-.text-slide, #text-works, #text-about{
+.text-slide, #text-works, #text-about, .img-slide{
     display: inline-block;
     white-space: break-spaces;
     transform: translateY(120%);
@@ -467,9 +467,23 @@ section.page-title{
     overflow: hidden;
 }
 
+.big-span{
+    padding-top: 5%;
+}
+
+.big-mask{
+    margin-top: -5%;
+}
+
 .animation-slideup{
     animation-name: SlideUp;
     animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.animation-slideupslow{
+    animation-name: SlideUp;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 

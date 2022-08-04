@@ -2,10 +2,6 @@ console.log("Funciones cargadas");
 
 $(document).ready(function(){
 
-    $(".location-animation path").attr("stroke-width","2.8");
-
-    $("div.big-mask").removeClass("text-mask").delay(500);
-
     console.log("Borde activado");
 
     $(".hamburger--spring").click(function(){
@@ -47,16 +43,37 @@ $(document).ready(function(){
 
     animacionScroll("#text-about", "animation-slideup");
     animacionScroll("#text-works", "animation-slideup");
-    animacionScroll("#location-lottie", "animation-fadein");
     animacionScroll("span.slideup-menu", "animation-slideup");
 
-    
+    var slideup = $(".text-slide");
+    setTimeout(function() {
+        slideup.addClass("animation-slideup");
+    }, 2000);
+
+    var slideupslow = $(".img-slide");
+    setTimeout(function() {
+        slideupslow.addClass("animation-slideupslow");
+    }, 2000);
+
+    var fadein = $("#location-lottie, .status");
+    setTimeout(function() {
+        fadein.addClass("animation-fadein");
+    }, 2300);
+
+    // var removemask = $(".big-mask");
+    // setTimeout(function() {
+    //     removemask.removeClass("text-mask");
+    // }, 2700);
+
 });
 
 
 window.onload = function() {
     $(".loader").slideUp(2000);
-    $("span.text-slide").addClass(animation-slideup).delay(2000);
+};
+
+window.unload = function() {
+    $(".loader").slideUp(2000);
 };
 
 

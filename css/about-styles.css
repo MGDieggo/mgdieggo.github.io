@@ -11,6 +11,7 @@ div.name h1{
 
 div.status{
     text-align: end;
+    opacity: 0;
 }
 
 section.description{
