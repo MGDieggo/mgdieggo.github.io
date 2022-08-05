@@ -22,9 +22,9 @@ $(document).ready(function(){
         $("#menu").fadeToggle("slow");
     });
     
-    $("#menu a" ).click(function(){
-        $(".hamburger").eq(0).click();
-    });
+    // $("#menu a" ).click(function(){
+    //     $(".hamburger").eq(0).click();
+    // });
 
     $("#experience").click(function(){
         $("#experience-content").slideToggle();
@@ -72,10 +72,23 @@ window.onload = function() {
     $(".loader").slideUp(2000);
 };
 
-window.unload = function() {
-    $(".loader").slideUp(2000);
-};
+$(".unload-animation").click(function(event) {
+    var enlace = $(this).attr("href")
+    $(".loader2").addClass("appear");
+    event.preventDefault(function(){});
+    setTimeout(function(){
+        window.location.assign(enlace);
+    }, 1000);
+})
 
+$(".menu-link").click(function(event) {
+    var enlacemenu = $(this).attr("href")
+    $(".loader2").addClass("appear");
+    event.preventDefault(function(){});
+    setTimeout(function(){
+        window.location.assign(enlacemenu);
+    }, 3000);
+})
 
 function animacionScroll(id_element, clase){
     $(window).scroll(function(){
