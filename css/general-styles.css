@@ -446,7 +446,7 @@ p:not(.footer-text){
     height: 100%;
     z-index: 999999;
     background: #cccac9;
-    transition: 2.5s ease;
+    transition: 1s ease;
 }
 
 .appear{

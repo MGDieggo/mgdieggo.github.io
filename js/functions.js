@@ -21,10 +21,6 @@ $(document).ready(function(){
     $(".hamburger").click(function() {
         $("#menu").fadeToggle("slow");
     });
-    
-    // $("#menu a" ).click(function(){
-    //     $(".hamburger").eq(0).click();
-    // });
 
     $("#experience").click(function(){
         $("#experience-content").slideToggle();
@@ -44,50 +40,36 @@ $(document).ready(function(){
     animacionScroll("#text-about", "animation-slideup");
     animacionScroll("#text-works", "animation-slideup");
     animacionScroll("span.slideup-menu", "animation-slideup");
+    animacionScroll(".img-slide", "animation-slideupslow");
 
     var slideup = $(".text-slide");
     setTimeout(function() {
         slideup.addClass("animation-slideup");
-    }, 2000);
+    }, 1000);
 
-    var slideupslow = $(".img-slide");
+    var slideupslow = $("video.img-slide");
     setTimeout(function() {
         slideupslow.addClass("animation-slideupslow");
-    }, 2000);
+    }, 1000);
 
     var fadein = $("#location-lottie, .status");
     setTimeout(function() {
         fadein.addClass("animation-fadein");
-    }, 2300);
-
-    // var removemask = $(".big-mask");
-    // setTimeout(function() {
-    //     removemask.removeClass("text-mask");
-    // }, 2700);
+    }, 1300);
 
 });
 
-
 window.onload = function() {
-    $(".loader").slideUp(2000);
+    $(".loader").slideUp(1000).delay(500);
 };
 
-$(".unload-animation").click(function(event) {
-    var enlace = $(this).attr("href")
-    $(".loader2").addClass("appear");
-    event.preventDefault(function(){});
-    setTimeout(function(){
-        window.location.assign(enlace);
-    }, 1000);
-})
-
-$(".menu-link").click(function(event) {
+$(".menu-link, .logo, .unload-animation").click(function(event) {
     var enlacemenu = $(this).attr("href")
     $(".loader2").addClass("appear");
     event.preventDefault(function(){});
     setTimeout(function(){
         window.location.assign(enlacemenu);
-    }, 3000);
+    }, 1200);
 })
 
 function animacionScroll(id_element, clase){
