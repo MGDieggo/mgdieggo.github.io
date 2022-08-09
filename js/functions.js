@@ -60,6 +60,33 @@ $(document).ready(function(){
 
 window.onload = function() {
     $(".loader").slideUp(1000).delay(500);
+
+    document.getElementById("contact-form").addEventListener("submit", function(event){
+        event.preventDefault();
+        console.log("SUBMIT");
+        var email = $("input[type=email]").val("");
+
+        if(email==""){
+            $("#error-mail").show();
+            return
+        }
+        emailjs.sendForm("service_cbqt5f9", "template_ysv4pm4", this)
+        .then( 
+            function( success ){
+                console.log("SUCCESS");
+                console.log(success);
+                $("input[type=text]").val("");
+                $("input[type=email]").val("");
+                $("textarea").val("");
+                $("div.success-message").show();
+            }, 
+            function( error ){
+                console.log("ERROR");
+                console.log(error);
+                $("#error-message").show();
+            }   
+        );
+    });
 };
 
 $(".menu-link, .logo, .unload-animation").click(function(event) {
