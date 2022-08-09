@@ -40,14 +40,13 @@ $(document).ready(function(){
     animacionScroll("#text-about", "animation-slideup");
     animacionScroll("#text-works", "animation-slideup");
     animacionScroll("span.slideup-menu", "animation-slideup");
-    animacionScroll(".img-slide", "animation-slideupslow");
 
     var slideup = $(".text-slide");
     setTimeout(function() {
         slideup.addClass("animation-slideup");
     }, 1000);
 
-    var slideupslow = $("video.img-slide");
+    var slideupslow = $("video.img-slide, .img-slide");
     setTimeout(function() {
         slideupslow.addClass("animation-slideupslow");
     }, 1000);
