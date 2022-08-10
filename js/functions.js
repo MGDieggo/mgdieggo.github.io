@@ -61,6 +61,11 @@ $(document).ready(function(){
 window.onload = function() {
     $(".loader").slideUp(1000).delay(500);
 
+    var sendEmail = document.getElementById("contact-form");
+    if(sendEmail == null){
+        return;
+    }
+
     document.getElementById("contact-form").addEventListener("submit", function(event){
         event.preventDefault();
         console.log("SUBMIT");
@@ -101,10 +106,16 @@ $(".menu-link, .logo, .unload-animation").click(function(event) {
 function animacionScroll(id_element, clase){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop(); 
+        if($(id_element).length==0){
+            return;
+        }
+        
         var offsetElement = $(id_element).offset().top;
         var heightWindow = $(window).height();
         if(scroll + heightWindow/1 >= offsetElement){
             $(id_element).addClass(clase);     
         } 
+        
+        
     }) 
 }
