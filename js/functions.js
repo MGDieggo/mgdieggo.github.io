@@ -119,3 +119,4 @@ function animacionScroll(id_element, clase){
         
     }) 
 }
+
